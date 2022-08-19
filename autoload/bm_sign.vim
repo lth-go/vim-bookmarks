@@ -17,13 +17,8 @@ function! bm_sign#init()
   sign define BookmarkAnnotation texthl=BookmarkAnnotationSign
   execute "sign define Bookmark text=". g:bookmark_sign
   execute "sign define BookmarkAnnotation text=". g:bookmark_annotation_sign
-  if g:bookmark_highlight_lines
-    sign define Bookmark linehl=BookmarkLine
-    sign define BookmarkAnnotation linehl=BookmarkAnnotationLine
-  else
-    sign define Bookmark linehl=
-    sign define BookmarkAnnotation linehl=
-  endif
+  sign define Bookmark linehl=
+  sign define BookmarkAnnotation linehl=
 endfunction
 
 function! bm_sign#define_highlights()
